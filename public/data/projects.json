@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "name": "Eventify",
+        "description": "",
+        "image": "/images/eventify.png",
+        "technologies": [
+            "Next.js",
+            "Tailwind CSS",
+            "Symfony",
+            "MySQL",
+            "Docker"
+        ],
+        "isMain": true,
+        "github": "/MaelC-MLK/sae-501-app"
+    },
+    {
+        "id": 2,
+        "name": "Intervenant Manager",
+        "description": "",
+        "image": "/images/intervenant-manager.png",
+        "technologies": [
+            "Next.js",
+            "Tailwind CSS",
+            "PostgreSQL",
+            "Docker"
+        ],
+        "isMain": true,
+        "github": "/n1noT/intervenant-mana"
+    },
+    {
+        "id": 3,
+        "name": "Canal +",
+        "description": "",
+        "image": "/images/canal.png",
+        "technologies": [
+            "React",
+            "Tailwind CSS",
+            "Symfony",
+            "MySQL",
+            "Docker"
+        ],
+        "isMain": true,
+        "github": "/n1noT/SAE401"
+    },
+    {
+        "id": 4,
+        "name": "Eco Cuisto",
+        "description": "",
+        "image": "/images/ecocuisto.png",
+        "technologies": [
+            "A-frame",
+            "JavaScript"
+        ],
+        "isMain": true,
+        "github": "/n1noT/SAE402"
+    },
+    {
+        "id": 5,
+        "name": "Bookshop",
+        "description": "",
+        "image": "",
+        "technologies": [
+            "Symfony",
+            "MySQL",
+            "Docker"
+        ],
+        "isMain": false,
+        "github": "/n1noT/bookshop"
+    },
+    {
+        "id": 6,
+        "name": "Figma Store",
+        "description": "",
+        "image": "",
+        "technologies": [
+            "Next.js",
+            "Tailwind CSS"
+        ],
+        "isMain": false,
+        "github": "/n1noT/R505-figma-website"
+    }
+]

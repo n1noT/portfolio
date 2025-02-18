@@ -3,19 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --black: #1B1B1B;
+  --grey-dark: #3F3F3F;
+  --grey-light: #E5E5E5;
+  --blue: #056CF2;
+  --blue-light: #0C87F2;
+  --blue-very-light: #E6F2FF;
+  --red: #ff5c5c;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary: var(--blue);
+  --secondary: var(--grey-dark);
+  --accent: var(--blue-light);
+  --accent-light: var(--blue-very-light);
+  --danger: var(--red);
+  --background: var(--black);
+  --foreground: var(--grey-light);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Consolas, sans-serif;
+  min-height: 100vh;
+}
+
+.mask {
+  mask-image: url('/pattern.svg');
 }
