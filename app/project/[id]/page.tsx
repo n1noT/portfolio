@@ -2,18 +2,28 @@
 
 import { ProjectType } from "@/type/types";
 import { getProjectById } from "@/lib/data";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 
-
-export default function Page({params}: Readonly<{ params: { id: string } }>) {
-    const { id }: { id: string } = use(params);
+export default function Page() { 
+    const { id } = useParams();
     const [project, setProject] = useState<ProjectType | null>(null);
 
     useEffect(() => {
-        const projectId = parseInt(id);
-        getProjectById(projectId).then((data) => setProject(data));
-    }, [id]); 
+        if (!id) return;
+        const fetchProject = async () => {
+            try {
+                const projectId = parseInt(Array.isArray(id) ? id[0] : id);
+                const data = await getProjectById(projectId);
+                setProject(data);
+            } catch (error) {
+                console.error(error);
+            } finally {
+            }
+        };
+        fetchProject();
+    }, [id]);
 
     return (
         <div className="bg-background text-foreground">
@@ -28,4 +38,4 @@ export default function Page({params}: Readonly<{ params: { id: string } }>) {
             )}
         </div>
     );
-    }
+}

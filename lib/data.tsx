@@ -7,17 +7,17 @@ export async function getAllProjects() {
 }
 
 export async function getMainProjects() {
-    let data = await fetch(`/data/projects.json`);
-    let projects = await data.json();
-    let mainProjects = projects.filter((project: ProjectType) => project.isMain);
+    const data = await fetch(`/data/projects.json`);
+    const projects = await data.json();
+    const mainProjects = projects.filter((project: ProjectType) => project.isMain);
 
     return mainProjects;
 }
 
 export async function getProjectById(id: number) {
-    let data = await fetch(`/data/projects.json`);
-    let projects = await data.json();
-    let project = projects.find((project: ProjectType) => project.id === id); 
+    const data = await fetch(`/data/projects.json`);
+    const projects = await data.json();
+    const project = projects.find((project: ProjectType) => project.id === id); 
 
     return project
 }
